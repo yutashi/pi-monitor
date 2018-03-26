@@ -1,0 +1,13 @@
+{
+  "name": "Pi Monitor",
+  "version": "",
+  "description": "",
+  "main": "app.py",
+  "author": "",
+  "language":"python",
+  "license": "",
+  "scripts": {
+     "start": "python -u app.py"
+    }
+}
+
