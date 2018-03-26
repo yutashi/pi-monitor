@@ -1,5 +1,6 @@
 import psutil
 import time
+import datetime
 
 
 while True:
@@ -12,5 +13,6 @@ while True:
     # Get users who are logging in the terminal
     # data = psutil.users()
 
-    print(data)
+    timestamp = datetime.datetime.now().strftime('%H:%M:%S.%f')
+    print("Data: %s, Timestamp: %s" % (data, timestamp))
     time.sleep(30)
