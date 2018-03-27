@@ -12,10 +12,10 @@ while True:
     # stat = psutil.cpu_percent()
 
     # Get disk usage
-    stat = psutil.disk_usage('/')
+    # stat = psutil.disk_usage('/')
 
     # Get users who are logging in the terminal
-    # stat = psutil.users()
+    stat = psutil.users()
 
     timestamp = datetime.datetime.now().strftime('%H:%M:%S.%f')
     data = {"timestamp": timestamp, "stat": stat}
