@@ -1,6 +1,10 @@
+import pprint
 import psutil
 import time
 import datetime
+
+
+pp = pprint.PrettyPrinter(indent=2)
 
 
 while True:
@@ -8,13 +12,13 @@ while True:
     # stat = psutil.cpu_percent()
 
     # Get disk usage
-    stat = psutil.disk_partitions()
+    stat = psutil.disk_usage('/')
 
     # Get users who are logging in the terminal
     # stat = psutil.users()
 
     timestamp = datetime.datetime.now().strftime('%H:%M:%S.%f')
     data = {"timestamp": timestamp, "stat": stat}
-    print(data)
+    pp.pprint(data)
 
     time.sleep(30)
