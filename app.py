@@ -1,24 +1,35 @@
-import pprint
-import psutil
-import time
 import datetime
+import random
+import os
+import pprint
+# import serial
+import time
 
 
+# ser = serial.Serial('/dev/ttyS1', 9600)
 pp = pprint.PrettyPrinter(indent=2)
 
 
-while True:
-    # Get CPU percent
-    # stat = psutil.cpu_percent()
+def get_temp():
+    return random.randint(0, 50)
 
-    # Get disk usage
-    # stat = psutil.disk_usage('/')
+def get_humid():
+    return random.randint(0, 50)
 
-    # Get users who are logging in the terminal
-    stat = psutil.users()
+def get_current():
+    return random.randint(-100, 100)
 
-    timestamp = datetime.datetime.now().strftime('%H:%M:%S.%f')
-    data = {"timestamp": timestamp, "stat": stat}
-    pp.pprint(data)
 
-    time.sleep(30)
+if __name__ == '__main__':
+
+    while True:
+        timestamp = datetime.datetime.now().strftime('%H:%M:%S.%f')
+        data = {
+            "timestamp": timestamp, 
+            "temperature": get_temp(),
+            "humidity": get_humid(),
+            "current": get_current()
+        }
+
+        pp.pprint(data)
+        time.sleep(5)
