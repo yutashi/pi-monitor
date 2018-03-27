@@ -25,9 +25,9 @@ if __name__ == '__main__':
     while True:
         timestamp = datetime.datetime.now().strftime('%H:%M:%S.%f')
         data = {
-            "timestamp": timestamp, 
-            "temperature": get_temp(),
-            "humidity": get_humid(),
+            "time": timestamp, 
+            "temp": get_temp(),
+            "humid": get_humid(),
             "current": get_current()
         }
 
