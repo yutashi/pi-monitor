@@ -32,4 +32,4 @@ if __name__ == '__main__':
         }
 
         pp.pprint(data)
-        time.sleep(5)
+        time.sleep(10)
