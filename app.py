@@ -2,7 +2,7 @@ import datetime
 import random
 import os
 import pprint
-import serial
+# import serial
 import time
 
 
