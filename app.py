@@ -27,7 +27,7 @@ if __name__ == '__main__':
         data = {
             "time": timestamp, 
             "temp": get_temp(),
-            "humid": get_humid(),
+            # "humid": get_humid(),
             # "current": get_current()
         }
 
