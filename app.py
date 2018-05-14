@@ -27,8 +27,8 @@ if __name__ == '__main__':
         data = {
             "time": timestamp, 
             "temp": get_temp(),
-            # "humid": get_humid(),
-            # "current": get_current()
+            "humid": get_humid(),
+            "current": get_current()
         }
 
         pp.pprint(data)
