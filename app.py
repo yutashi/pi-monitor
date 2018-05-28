@@ -31,5 +31,5 @@ if __name__ == '__main__':
             # "current": get_current()
         }
 
-        pp.pprint(data)
+        # pp.pprint(data)
         time.sleep(60)
